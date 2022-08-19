@@ -8,7 +8,6 @@ import rightArrow from '../assets/icons/right-arrow-icon.png';
 import './Grid.scss';
 
 const Grid = ({ devices }: IsDeviceViewProps) => {
-  console.log(devices);
   const [slicedDevices, setSlicedDevices] = useState<IsDevice[] | undefined>([]);
   const [previousPlace, setPreviousPlace] = useState(0);
   const [currentPlace, setCurrentPlace] = useState(10);
