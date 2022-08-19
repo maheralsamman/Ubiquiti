@@ -1,0 +1,120 @@
+@import '../style';
+
+.products-list {
+  margin-top: 1em;
+  margin-right: 3em;
+  margin-bottom: 1em;
+  margin-left: 3em;
+  display: flex;
+  flex-direction: column;
+
+  &__noResponse {
+    @include text($fontSize: 16px, $color: $ubiquiti-blue);
+    margin: 34px auto;
+    max-width: 300px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    padding-bottom: .2em;
+    border-bottom: 1px solid $border-dark;
+
+    &:hover {
+      background-color: none;
+    }
+
+    &--count {
+      @include text($color: $font-color-grey);
+      text-align: center;
+      width: 136px;
+      transform: translateX(-15px);
+    }
+
+    &--line,
+    &--name {
+      @include text($weight: 700);
+      width: 254px;
+    }
+  }
+
+  &__content {
+    @include text($lineHeight: 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-dark;
+    height: 33px;
+
+    &:hover {
+      background-color: $main-light;
+      color: $ubiquiti-blue;
+    }
+
+    &--img {
+      width: 136px;
+      text-align: center;
+    }
+
+    &--line {
+      width: 254px;
+    }
+
+    &--name {
+      width: 270px;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin: 25px;
+  &__btn {
+    @include text($lineHeight: 0, $color: $ubiquiti-blue);
+    background: transparent;
+    border: none;
+  }
+  
+  &__leftArrow, &__rightArrow {
+    width: 50px;
+    cursor: pointer;
+    filter: invert(30%) sepia(75%) saturate(4947%) hue-rotate(208deg) brightness(104%) contrast(104%);
+    transition: transform .3s;
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .products-list {
+    margin-top: .5em;
+    margin-right: 1.5em;
+    margin-bottom: .5em;
+    margin-left: 1.5em;
+
+    &__header,
+    &__content {
+      height: 66px;
+
+      &--counter,
+      &--img {
+        width: 60px;
+        display: none;
+      }
+
+      &--line {
+        width: 200px;
+      }
+
+      &--name {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import '../style';
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-light;
+  height: 48px;
+  padding-right: 2em;
+  padding-left: 1.8em;
+
+  &__magnifierIcon {
+    position: absolute;
+    left: 38px;
+  }
+
+  &__searchField {
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    width: 344px;
+    padding-left: 35px;
+    caret-color: $ubiquiti-blue;
+    background-color: $main-dark;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $ubiquiti-blue;
+    }
+  }
+
+  &__closeIcon {
+    cursor: pointer;
+    position: absolute;
+    left: 380px;
+  }
+
+  &__backIcon {
+    cursor: pointer;
+  }
+
+  &__info {
+    @include text($lineHeight: 44px, $color: $font-color-light);
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__viewMethod {
+    height: 32px;
+    width: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--list,
+    &--grid {
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+
+    &--filter {
+      @include text;
+      cursor: pointer;
+      height: 24px;
+      margin: 0px;
+      border: none;
+      background: none;
+
+      &:hover {
+        color: $ubiquiti-blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .navigation {
+    padding-right: 1em;
+    padding-left: .5em;
+
+    &__searchField {
+      width: 150px;
+    }
+
+    &__magnifierIcon {
+      left: 15px;
+    }
+
+    &__closeIcon {
+      left: 165px;
+    }
+  }
+}

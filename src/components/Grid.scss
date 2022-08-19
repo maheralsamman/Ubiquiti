@@ -1,0 +1,92 @@
+@import '../style';
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__noResponse {
+  @include text($fontSize: 16px, $color: $ubiquiti-blue);
+  margin: 50px;
+  max-width:300px;
+  word-wrap: break-word;
+  text-align: center;
+}
+}
+
+.product {
+  width: 233px;
+  height: 193px;
+  border: 1px solid $border-dark;
+  border-radius: 8px;
+  margin: .7em;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $ubiquiti-blue;
+  }
+
+  &__img {
+    background-color: $main-dark;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &__text {
+    margin: 12px;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  &__name {
+    @include text($weight: 400);
+    overflow-x: hidden;
+    height: 24px;
+    margin: 0px;
+  }
+
+  &__line {
+    @include text($fontSize: 12px, $lineHeight: 20px, $color: $font-color-light);
+    margin: 0px;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin: 25px;
+  &__btn {
+    @include text($lineHeight: 0, $color: $ubiquiti-blue);
+    background: transparent;
+    border: none;
+  }
+  
+  &__leftArrow, &__rightArrow {
+    width: 50px;
+    cursor: pointer;
+    filter: invert(30%) sepia(75%) saturate(4947%) hue-rotate(208deg) brightness(104%) contrast(104%);
+    transition: transform .3s;
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}
+@media screen and (max-width: 755px) {
+  .products-grid {
+    margin-top: .5em;
+  }
+
+  .product {
+    width: 173px;
+    height: 133px;
+    margin: .3em;
+
+    &__img {
+      height: 64px;
+    }
+  }
+}

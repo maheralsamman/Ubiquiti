@@ -1,0 +1,59 @@
+@import '../style';
+
+.filter {
+  background-color: white;
+  box-shadow: 0px 12px 48px 0px #c6c6c6;
+  position: absolute;
+  right: 0px;
+  top: 56px;
+  width: 256px;
+  padding-bottom: 28px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-dark;
+    height: 48px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    &--title {
+      @include text;
+    }
+
+    &--close:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    @include text($weight: 700, $color: black);
+    margin-top: 20px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+  }
+
+  &__choices {
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+    padding-right: 24px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+
+    &--checkbox {
+      cursor: pointer;
+    }
+
+    &--label {
+      @include text;
+      cursor: pointer;
+      padding-left: 8px;
+      &:hover {
+        color: $ubiquiti-blue;
+      }
+    }
+  }
+}

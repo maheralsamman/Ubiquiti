@@ -1,0 +1,18 @@
+$main-light: #FBFBFB;
+$main-dark: #F6F6F8;
+
+$border-light: #EDEDF0;
+$border-dark: #DBDCE1;
+$ubiquiti-blue: #006FFF;
+
+$font-color-main: rgba(0, 0, 0, 0.65);
+$font-color-grey: #BDBDBD;
+$font-color-darkgrey: #838691;
+$font-color-light: rgba(0, 0, 0, 0.45);
+
+@mixin text($weight: 400, $lineHeight: 24px, $fontSize: 14px, $color: $font-color-main) {
+  font-weight: $weight;
+  line-height: $lineHeight;
+  font-size: $fontSize;
+  color: $color;
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url(./assets/fonts/Lato-Regular.ttf) format('truetype');
+}
+
+* {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Arial', 'Monospace', 'Fantasy',
+  'Times New Roman',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,36 @@
+@import '../style';
+
+.header {
+  background-color: $main-dark;
+  height: 56px;
+  align-items: center;
+  z-index: 2;
+
+  &__img {
+    position: absolute;
+    left: -1px;
+  }
+
+  &__text {
+    margin-left: 4.5em;
+    margin-right: 2em;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &--myName {
+      @include text;
+    }
+    &--message {
+      @include text($fontSize: 18px, $color: $ubiquiti-blue);
+    }
+    &--title {
+      @include text($fontSize: 20px, $color: $font-color-darkgrey);
+      letter-spacing: -0.5px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+  }
+}

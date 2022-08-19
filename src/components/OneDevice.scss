@@ -1,0 +1,53 @@
+@import '../style';
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.device {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 688px;
+
+  &__image {
+    width: 256px;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-light;
+    @include text;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .device {
+    flex-direction: column;
+
+    &__table {
+      width: 300px;
+    }
+    
+    &__line {
+      height: 56px;
+      text-align: right;
+
+      &--data {
+        width: 150px;
+      }
+    }
+  }
+}
